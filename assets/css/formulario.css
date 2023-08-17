@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.intro-text-content{
+    margin-top: 5rem;
+}
+
+.formulario{
+    grid-column: span 2;
+}
+
+.formulario fieldset{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.grupo-contato{
+    flex: 1 1 32rem;
+}
+
+.grupo-contato label{
+    display: block;
+}
+
+.grupo-contato input, .grupo-contato textarea{
+    border: none;
+    background: var(--light-gray-color);
+    padding: 1rem 2rem;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.formulario button{
+    border: 0.3rem solid var(--white-color); 
+    background: none;
+    padding: 1.5rem;
+    color: var(--white-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.formulario button:hover{
+    background: var(--white-color);
+    color: black;
+    transition: 0.3s;
+}
+

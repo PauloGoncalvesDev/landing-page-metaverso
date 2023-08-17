@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.top3coin-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;    
+    min-height: 100vh;
+}
+
+.top3coin-content h1{
+    margin-top: 5rem;
+}
+
+.top3coin-content p{
+    margin-bottom: 5rem;
+}
+
+.top3coin-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--gap);
+    counter-reset: grid-counter;
+
+}
+
+.top3coin-grid h2{
+    font-size: 2.5rem;
+    position: relative;
+    padding-left: 6rem;
+    padding-bottom: 4rem;
+}
+
+.top3coin-grid h2::before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 6rem;
+    font-style: italic;
+    top: -1rem;
+    left: -0.5rem;
+}
+
+@media (max-width: 900px){
+    .top3coin-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .top3coin-content h1{
+        font-size: 3rem;
+    }
+}
